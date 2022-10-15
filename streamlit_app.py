@@ -73,12 +73,15 @@ if __name__ == "__main__":
             st.write(all_station_info_df[col_name][0])
 
 
-    #Side Bar menu
+    # menu bar
 
     with st.sidebar:
         selected = option_menu(
             menu_title=None,
-            options=["Station","Map"]
+            options=["Station","Map"],
+            icons=["geo-alt-fill","map"],
+            default_index=0,
+            orientation= "horizontal"
         )
 
     if selected == "Map":
