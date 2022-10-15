@@ -73,7 +73,3 @@ if __name__ == "__main__":
     
     #Map implementation--->
     #mapdata = pd.read_sql_query(f'SELECT * FROM station_info WHERE "STATION_ID" = {options};', connector)
-   <p>
-<iframe src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d48361.83443304006!2d-74.0242403590238!3d40.74850403243495!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1sciti%20bike%20near%20new%20york%2C%20ny%2C%20usa!5e0!3m2!1sen!2sin!4v1665854535197!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-</p>
-                      
