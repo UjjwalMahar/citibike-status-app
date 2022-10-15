@@ -1,7 +1,7 @@
 import pandas as pd
 from snowflake import connector
 import streamlit as st
-from streamlit_option_menu import option_menu
+
 
 def get_snowflake_connector():
     # connect to snowflake
@@ -78,18 +78,3 @@ if __name__ == "__main__":
         mapdata = mapdata.rename(columns={"LATITUDE":"lat","LONGITUDE":"lon"})
         st.map(mapdata)
 
-
-    # menu bar
-
-    with st.sidebar:
-        selected = option_menu(
-            menu_title=None,
-            options=["Station","Map"],
-            icons=["geo-alt-fill","map"],
-            default_index=0,
-            orientation= "horizontal"
-        )
-
-    if selected == "Map":
-        st.title("Available Bike Station ")
-        
