@@ -8,7 +8,6 @@ def get_snowflake_connector():
     return connector.connect(**st.secrets["snowflake"])
 
 
-
 if __name__ == "__main__":
     # Header
     st.markdown("<h2 style='text-align: center; color: #1F3442; font-size:60px;'>Citibike Station 🚲 </h2>", unsafe_allow_html=True)
@@ -71,10 +70,9 @@ if __name__ == "__main__":
             st.write(*[x.upper() for x in col_name.split("_")], ":")
         with right_col:
             st.write(all_station_info_df[col_name][0])
-
+    
     #Map implementation--->
-        #mapdata = pd.read_sql_query(f'SELECT * FROM station_info WHERE "STATION_ID" = {options};', connector)
-        mapdata = pd.read_sql_query('SELECT * FROM station_info ;', connector)
-        mapdata = mapdata.rename(columns={"LATITUDE":"lat","LONGITUDE":"lon"})
-        st.map(mapdata)
-
+    #mapdata = pd.read_sql_query(f'SELECT * FROM station_info WHERE "STATION_ID" = {options};', connector)
+    mapdata = pd.read_sql_query('SELECT * FROM station_info ;', connector)
+    mapdata = mapdata.rename(columns={"LATITUDE":"lat","LONGITUDE":"lon"})
+    st.map(mapdata)
